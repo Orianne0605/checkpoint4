@@ -1,11 +1,16 @@
 {% extends "base.html.twig" %}
 
 {% block header %}
-    Cliquez sur les liens
+    <h1>{{ click }}</h1>
 {% endblock %}
 
 {% block body %}
-    <a href='https://www.hellobank.fr/rsc/contrib/pdf/tarifs-hellobank.pdf'>Tarifs de HelloBank</a>
-    <a href='https://www.orangebank.fr/tarifs'>Tarifs de Orange Bank</a>
-    <a href='https://www.boursorama.com/pub/brochure_tarifaire/boursorama_bt.pdf'>Tarifs de Boursorama</a>
+    <a href='https://www.hellobank.fr/rsc/contrib/pdf/tarifs-hellobank.pdf'target="_blank">Tarifs de HelloBank</a>
+    <a href='https://www.orangebank.fr/tarifs'target="_blank">Tarifs de Orange Bank</a>
+    <a href='https://www.boursorama.com/pub/brochure_tarifaire/boursorama_bt.pdf'target="_blank">Tarifs de Boursorama</a>
+
+    <a href="assets/PDF/Tarifs-BNP.pdf"target="_blank">Les cartes de HelloBank</a>
+    <a href='https://www.orangebank.fr/tarifs'target="_blank">Les cartes de Orange Bank</a>
+    <a href='https://www.boursorama.com/pub/brochure_tarifaire/boursorama_bt.pdf'target="_blank">Les cartes de Boursorama</a>
 {% endblock %}
+
