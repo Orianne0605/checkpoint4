@@ -1,0 +1,56 @@
+{% extends "base.html.twig" %}
+
+{% block header %}
+    <div class="top-header">
+        {{ form_start(form) }}
+            <div id="searchBar">{{ form_row(form.Recherche) }}</div>
+            <button class=search type="submit" name="btnSearch"><img src="{{ asset('build/images/logo-loupe.png')}}" alt="loupe"/></button>
+        {{ form_end(form) }}
+    </div>
+
+    <div class="bottom-header">
+    <button class="navbar-ws" type="button">
+        <a class="navbar-brand"></a>
+    </button>
+    <h1>Ma new bank</h1>
+    <div class="collapse-navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <button class="navbar-toggler" type="button">
+                <li class="deroulant"><a class="nav">Banque physique</a>
+                    <ul class="sous">
+                        <li><a href={{ path('PLB') }}>Tous les tarifs</a></li>
+                        <li><a href={{ path('PLB') }}>Les forfaits</a></li>
+                        <li><a href={{ path('PLB') }}>Les cartes</a></li>
+                    </ul>
+                </li>
+            </li>
+            </button>
+            <button class="navbar-toggler" type="button">
+                <li class="nav-item"><a class="nav">Banque en ligne</a>
+                    <ul class="sous">
+                        <li><a href={{ path('POB') }}>Tous les tarifs</a></li>
+                        <li><a href={{ path('POB') }}>Les forfaits</a></li>
+                        <li><a href={{ path('POB') }}>Les cartes</a></li>
+                    </ul>
+                </li>
+            </button>
+            <button class="navbar-toggler" type="button">
+                <li class="nav-item"><a class="nav">Comparateur</a>
+                    <ul class="sous">
+                        <li><a href={{ path('Array') }}>Cartes</a></li>
+                        <li><a href={{ path('Array') }}>Forfaits</a></li>
+                    </ul>
+                </li>
+            </button>
+        </ul>
+    </div>
+    <h1>Bonjour</h1>
+</div>
+{% endblock %}
+
+{% block body %}
+    <h2>{{ controller_name }} !</h2>
+    <a href="{{ path('form') }}"><button class="survey" type="button">Je réponds au questionnaire</button></a>
+{% endblock %}
+
+
