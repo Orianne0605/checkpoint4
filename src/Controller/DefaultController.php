@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Form\ProgramSearchType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends AbstractController
 {
@@ -13,8 +15,13 @@ class DefaultController extends AbstractController
      */
     public function index() :Response
     {
-        return $this->render('/homepage.html.twig', [
+        $form = $this->createForm(ProgramSearchType::class,
+            null,
+            ['method' => Request::METHOD_GET]
+        );
+        return $this->render('homepage.html.twig', [
             'controller_name' => 'Bienvenue',
+            'form' => $form->createView(),
         ]);
     }
 }

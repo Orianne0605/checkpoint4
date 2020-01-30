@@ -1,16 +1,32 @@
-body{
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 1.2em;
-    background-color: rgba(156, 248, 149, 0.5);
-    text-align: center;
+*{
+    margin: 0;
+    padding: 0;
 }
-
-header {
+.top-header{
+    background-color: rgb(121, 223, 183);
+    #searchBar{
+        width: 100%;
+        text-align: center;
+    }
+    .search {
+        box-shadow: none;
+        img {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+.bottom-header {
     display: flex;
     justify-content: space-between;
-    background-color: rgba(187, 250, 183, 0.4);
+    background-color: #FFFFFF;
     padding: 1.2em;
+    border-top: solid rgba(0,0,0,0.5);
     border-bottom: solid rgba(0,0,0,0.5);
+    z-index: 205 !important;
+    width: 100%;
+    max-width: 1800px;
+    position: relative;
 
     .navbar-toggler {
         background-color: white;
@@ -57,5 +73,12 @@ h1{
     font-size: 1.2em;
     padding: 0.8em;
     border-radius: 1.5em;
+}
+
+body{
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 1.2em;
+    background-color: rgba(156, 248, 149, 0.5);
+    text-align: center;
 }
 

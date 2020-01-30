@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Teaches;
+use App\Entity\Affiliate;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
- * @method Teaches|null find($id, $lockMode = null, $lockVersion = null)
- * @method Teaches|null findOneBy(array $criteria, array $orderBy = null)
- * @method Teaches[]    findAll()
- * @method Teaches[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Affiliate|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Affiliate||null findOneBy(array $criteria, array $orderBy = null)
+ * @method Affiliate|[]    findAll()
+ * @method Affiliate|[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class TeachesRepository extends ServiceEntityRepository
+class AffiliateRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Teaches::class);
+        parent::__construct($registry, Affiliate::class);
     }
 
     // /**
-    //  * @return Teaches[] Returns an array of Teaches objects
+    //  * @return Affiliate[] Returns an array of Affiliate objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class TeachesRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Teaches
+    public function findOneBySomeField($value): ?Affiliate
     {
         return $this->createQueryBuilder('t')
             ->andWhere('t.exampleField = :val')
