@@ -13,7 +13,7 @@ class DefaultController extends AbstractController
      */
     public function index() :Response
     {
-        return $this->render('/navbar.html.twig', [
+        return $this->render('/homepage.html.twig', [
             'controller_name' => 'Bienvenue',
         ]);
     }
