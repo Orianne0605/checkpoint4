@@ -64,7 +64,7 @@ class Packages
     private $packages;
 
     /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Conditions", mappedBy="conditions")
+     * @ORM\ManyToMany(targetEntity="Age", mappedBy="conditions")
      */
     private $conditions;
 
@@ -202,14 +202,14 @@ class Packages
     }
 
     /**
-     * @return Collection|Conditions[]
+     * @return Collection|Age[]
      */
     public function getConditions(): Collection
     {
         return $this->conditions;
     }
 
-    public function addCondition(Conditions $condition): self
+    public function addCondition(Age $condition): self
     {
         if (!$this->conditions->contains($condition)) {
             $this->conditions[] = $condition;
@@ -219,7 +219,7 @@ class Packages
         return $this;
     }
 
-    public function removeCondition(Conditions $condition): self
+    public function removeCondition(Age $condition): self
     {
         if ($this->conditions->contains($condition)) {
             $this->conditions->removeElement($condition);

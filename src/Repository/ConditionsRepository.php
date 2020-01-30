@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\Conditions;
+use App\Entity\Age;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Common\Persistence\ManagerRegistry;
 
 /**
- * @method Conditions|null find($id, $lockMode = null, $lockVersion = null)
- * @method Conditions|null findOneBy(array $criteria, array $orderBy = null)
- * @method Conditions[]    findAll()
- * @method Conditions[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method Age|null find($id, $lockMode = null, $lockVersion = null)
+ * @method Age|null findOneBy(array $criteria, array $orderBy = null)
+ * @method Age[]    findAll()
+ * @method Age[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
 class ConditionsRepository extends ServiceEntityRepository
 {
     public function __construct(ManagerRegistry $registry)
     {
-        parent::__construct($registry, Conditions::class);
+        parent::__construct($registry, Age::class);
     }
 
     // /**
-    //  * @return Conditions[] Returns an array of Conditions objects
+    //  * @return Age[] Returns an array of Age objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ConditionsRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?Conditions
+    public function findOneBySomeField($value): ?Age
     {
         return $this->createQueryBuilder('c')
             ->andWhere('c.exampleField = :val')

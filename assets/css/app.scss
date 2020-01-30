@@ -1,7 +1,9 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: 'ABeeZee', sans-serif;
 }
+
 .top-header {
     background-color: rgb(121, 223, 183);
     padding-top: 10px;
@@ -48,7 +50,6 @@
         padding: 5em;
         .navbar-brand {
             color: #FFFFFF;
-            font-family: 'ABeeZee', sans-serif;
             padding-left: 1.7em;
             padding-right: 1.7em;
         }
@@ -69,20 +70,50 @@ h1{
     align-items: center;
 }
 
-.nav{
-    color: black;
-    font-family: 'ABeeZee', sans-serif;
+.collapse-navbar-collapse ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+    text-align:center;
+}
+.collapse-navbar-collapse li {
+    float: left;
+    margin: auto;
+    padding: 0;
+
+    li a {
+        display: block;
+        width: 100px;
+        color: black;
+        text-decoration: none;
+        padding: 0.8em 1.8em;;
+        background-color: rgb(121, 223, 183);
+        border-radius: 1.5em;
+    }
+}
+.collapse-navbar-collapse li a:hover {
+    color:#FFD700;
+}
+.collapse-navbar-collapse ul li ul {
+    display:none;
+}
+.collapse-navbar-collapse ul li:hover ul {
+    display:block;
+}
+.collapse-navbar-collapse li:hover ul li {
+    float:none;
+}
+.collapse-navbar-collapse li ul {
+    position:absolute;
 }
 
 .survey{
-    font-family: 'ABeeZee', sans-serif;
     font-size: 1.2em;
     padding: 0.8em;
     border-radius: 1.5em;
 }
 
 body{
-    font-family: 'ABeeZee', sans-serif;
     font-size: 1.2em;
     background-color: rgba(156, 248, 149, 0.5);
     text-align: center;
