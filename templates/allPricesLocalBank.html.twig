@@ -1,11 +1,20 @@
 {% extends "base.html.twig" %}
 
 {% block header %}
-  <h1>{{ click }}</h1>
+  <h1>{{ clickTarifs }}</h1>
 {% endblock %}
 
 {% block body %}
-  <a href='https://mabanque.bnpparibas/fr/notre-offre/tarifs-et-conditions-bnp-paribas/conditions-tarifaires'target="_blank">Tarifs de BNP PARIBAS</a>
-  <a href='https://particuliers.societegenerale.fr/tous-nos-tarifs'target="_blank">Tarifs de Société Générale</a>
-  <a href='https://www.caisse-epargne.fr/hauts-de-france/tarifs-informations-reglementaires'target="_blank">Tarifs de la Caisse d'Epargne</a>
+<div class="prices">
+  <a href='https://mabanque.bnpparibas/fr/notre-offre/tarifs-et-conditions-bnp-paribas/conditions-tarifaires'target="_blank"><img src="{{ asset('build/images/logo-bnp-paribas.png') }}"/></a>
+  <a href='https://particuliers.societegenerale.fr/tous-nos-tarifs'target="_blank"><img src="{{ asset('build/images/logo-societe-generale.png') }}"/></a>
+  <a href='https://www.caisse-epargne.fr/hauts-de-france/tarifs-informations-reglementaires'target="_blank"><img src="{{ asset('build/images/logo-caisse-depargne.png') }}"/></a>
+</div>
+
+<div class="prices">
+  <a href='https://mabanque.bnpparibas/fr/gerer/cartes-moyens-paiement/cartes-bancaires'target="_blank">Les cartes de BNP Paribas</a>
+  <a href='https://particuliers.societegenerale.fr/ouvrir-compte-bancaire-en-ligne/moyens-paiement'target="_blank">Les cartes de Société Générale</a>
+  <a href='https://www.caisse-epargne.fr/particuliers/au-quotidien/nos-produits-pour-gerer-son-quotidien/cartes-bancaires'target="_blank">Les cartes de la Caisse d'Epargne</a>
+</div>
 {% endblock %}
+

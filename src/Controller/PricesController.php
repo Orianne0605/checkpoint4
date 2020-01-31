@@ -15,7 +15,7 @@ class PricesController extends AbstractController
     public function PricesLocal() :Response
     {
         return $this->render('allPricesLocalBank.html.twig', [
-            'click' => 'Cliquez sur les liens pour les consulter',
+            'clickTarifs' => 'Cliquez sur le logo pour consulter les tarifs',
         ]);
     }
 
@@ -26,7 +26,7 @@ class PricesController extends AbstractController
     public function PricesOnline() :Response
     {
         return $this->render('allPricesOnlineBank.html.twig', [
-            'click' => 'Cliquez sur les liens pour les consulter',
+            'clickTarifs' => 'Cliquez sur le logo pour consulter les tarifs',
         ]);
     }
 
@@ -37,7 +37,7 @@ class PricesController extends AbstractController
     public function Array() :Response
     {
         return $this->render('array.html.twig', [
-            'click' => 'Cliquez sur les liens pour les consulter',
+            'clickTarifs' => 'Cliquez sur le logo pour consulter les tarifs',
         ]);
     }
 }
