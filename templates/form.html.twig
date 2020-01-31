@@ -2,61 +2,64 @@
 
 {% block body %}
     {{ form_start(form) }}
-        <div class="firstQuestion"></div>
-            <div class="hideIt1 hideIt2">Avez-vous besoin d'un conseiller/d'une agence ?</div>
+        <div class="hideIt1 hideIt2 question">
+            <div class="labels">Avez-vous besoin d'un conseiller/d'une agence ?</div>
             <div class="nextOne choices">Oui</div>
-            <div id="secondButtonFirstQuestion" class = "choices">Non</div>
+            <div id="secondButtonQuestion" class = "choices">Non</div>
+        </div>
     {{ form_widget(form.affiliate) }}
 
-        <div class="secondQuestion"></div>
+        <div class="hideIt1 hideIt2 question">
             <div class="labels">Voyagez-vous :</div>
             <div class="nextOne choices">plus de 2 fois par an </div>
-            <div id="secondButtonFirstQuestion" class = "choices">plus de 2 fois par an </div>
-    <div id="thirdButtonFirstQuestion" class = "choices">jamais</div>
+            <div id="secondButtonQuestion" class = "choices">plus de 2 fois par an </div>
+            <div id="thirdButtonQuestion" class = "choices">jamais</div>
+        </div>
     {{ form_widget(form.travel) }}
 
-        <div class="thirdQuestion"></div>
+        <div class="hideIt1 hideIt2 question">
             <div class="labels">Si oui : voyagez-vous hors zone euro ?</div>
             <div class="nextOne choices">Oui</div>
-            <div id="secondButtonFirstQuestion" class = "choices">Non</div>
+            <div id="secondButtonQuestion" class = "choices">Non</div>
+        </div>
     {{ form_widget(form.eurozone) }}
 
-        <div class="fourthQuestion"></div>
+        <div class="hideIt1 hideIt2 question"></div>
             <div class="labels">Combien versez-vous sur votre compte tous les mois ?</div>
             <div class="nextOne choices">Moins de 1000€</div>
-            <div id="secondButtonFirstQuestion" class = "choices">entre 1000 et 1500€</div>
-            <div id="secondButtonFirstQuestion" class = "choices">entre 1500 et 3000€</div>
-            <div id="secondButtonFirstQuestion" class = "choices">plus de 3000€</div>
+            <div id="secondButtonQuestion" class = "choices">entre 1000 et 1500€</div>
+            <div id="thirdButtonQuestion" class = "choices">entre 1500 et 3000€</div>
+            <div id="fourthButtonQuestion" class = "choices">plus de 3000€</div>
     {{ form_widget(form.earnings) }}
 
-        <div class="fifthQuestion"></div>
-    <div class="labels">Si oui : voyagez-vous hors zone euro ?</div>
-    <div class="nextOne choices">Oui</div>
-    <div id="secondButtonFirstQuestion" class = "choices">Non</div>
+        <div class="hideIt1 hideIt2 question"></div>
+            <div class="labels">Si oui : voyagez-vous hors zone euro ?</div>
+            <div class="nextOne choices">Oui</div>
+            <div id="secondButtonQuestion" class = "choices">Non</div>
     {{ form_widget(form.overdraft_loan) }}
 
-        <div class="sixthQuestion"></div>
+        <div class="hideIt1 hideIt2 question"></div>
             <div class="labels">Faites-vous des paiements à distance ? </div>
             <div class="nextOne choices">Oui</div>
-            <div id="secondButtonFirstQuestion" class = "choices">Non</div>
+            <div id="secondButtonQuestion" class = "choices">Non</div>
     {{ form_widget(form.insurance) }}
 
-        <div class="seventhQuestion"></div>
+        <div class="hideIt1 hideIt2 question"></div>
             <div class="labels">En station-service ?</div>
             <div class="nextOne choices">Oui</div>
-            <div id="secondButtonFirstQuestion" class = "choices">Non</div>
+            <div id="secondButtonQuestion" class = "choices">Non</div>
     {{ form_widget(form.scale) }}
 
-        <div class="eighthQuestion"></div>
+        <div class="hideIt1 hideIt2 question"></div>
             <div class="labels">Préférez-vous une carte : </div>
             <div class="nextOne choices">à débit immédiat ?</div>
-            <div id="secondButtonFirstQuestion" class = "choices">à débit différé ?</div>
+            <div id="secondButtonQuestion" class = "choices">à débit différé ?</div>
     {{ form_widget(form.type) }}
 
-        <div class="ninthQuestion"></div>
+        <div class="hideIt1 hideIt2 question"></div>
             <div class="labels">Faites-vous des retraits dans d’autres banques ?</div>
             <div class="nextOne choices">Oui</div>
-            <div id="secondButtonFirstQuestion" class = "choices">Non</div>
+            <div id="secondButtonQuestion" class = "choices">Non</div>
     {{ form_widget(form.withdrawal) }}
 
         <div class="tenthQuestion">Votre nom</div>
@@ -67,7 +70,7 @@
 
         <div class="twelfthQuestion">Votre tranche d'âge</div>
             <div class="nextOne choices">entre 18 et 25 ans</div>
-            <div id="secondButtonFirstQuestion" class = "choices">plus de 25 ans</div>
+            <div id="secondButtonQuestion" class = "choices">plus de 25 ans</div>
     {{ form_widget(form.age) }}
 
         <div class="thirteenthQuestion">Votre e-mail</div>

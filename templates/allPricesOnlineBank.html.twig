@@ -1,11 +1,21 @@
 {% extends "base.html.twig" %}
 
 {% block header %}
-    Cliquez sur les liens
+    <h1>{{ clickTarifs }}</h1>
 {% endblock %}
 
 {% block body %}
-    <a href='https://www.hellobank.fr/rsc/contrib/pdf/tarifs-hellobank.pdf'>Tarifs de HelloBank</a>
-    <a href='https://www.orangebank.fr/tarifs'>Tarifs de Orange Bank</a>
-    <a href='https://www.boursorama.com/pub/brochure_tarifaire/boursorama_bt.pdf'>Tarifs de Boursorama</a>
+    <div class="prices">
+    <a href='https://www.hellobank.fr/rsc/contrib/pdf/tarifs-hellobank.pdf'target="_blank"><img src="{{ asset('build/images/logo-hello-bank.png') }}"/></a>
+
+    <a href='https://www.orangebank.fr/tarifs'target="_blank"><img src="{{ asset('build/images/logo-orange-bank.png') }}"/></a>
+    <a href='https://www.boursorama.com/pub/brochure_tarifaire/boursorama_bt.pdf'target="_blank"><img src="{{ asset('build/images/logo_boursorama.png') }}"/></a>
+    </div>
+
+    <div class="prices">
+    <a href='https://www.hellobank.fr/fr/vos-cartes-bancaires/'target="_blank">Les cartes de HelloBank</a>
+    <a href='https://www.orangebank.fr/offre/carte-visa-premium'target="_blank">Les cartes de Orange Bank</a>
+    <a href='https://www.boursorama-banque.com/modal/mod-comparer-cb.html'target="_blank">Les cartes de Boursorama</a>
+    </div>
 {% endblock %}
+

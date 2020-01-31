@@ -16,7 +16,12 @@ class FormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('affiliate', RadioType::class, [])
+            ->add('affiliate', RadioType::class, [
+                'attr' => [
+                    'class' => 'hideIt2'
+                ],
+                'required'   => false,
+            ])
             ->add('travel', Radiotype::class)
             ->add('eurozone',RadioType::class)
             ->add('earnings', RadioType::class)
