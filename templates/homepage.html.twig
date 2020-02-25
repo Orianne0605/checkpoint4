@@ -1,10 +1,16 @@
 {% extends "base.html.twig" %}
 
+    {% block stylesheets %}
+        {{ parent()}}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    {% endblock %}
+
 {% block header %}
     <div class="top-header">
         {{ form_start(form) }}
             <div id="searchBar">{{ form_row(form.Recherche) }}</div>
-            <button class=search type="submit" name="btnSearch"><img src="{{ asset('build/images/logo-loupe.png')}}" alt="loupe"/></button>
+            <button class=search type="submit" name="btnSearch"><img src="{{ asset('pictures/logo-loupe.png')}}" alt="loupe"/></button>
         {{ form_end(form) }}
     </div>
 
@@ -49,8 +55,27 @@
 {% endblock %}
 
 {% block body %}
-    <h2>{{ controller_name }} !</h2>
-    <a href="{{ path('form') }}"><button class="survey" type="button">Je réponds au questionnaire</button></a>
+<h2>{{ controller_name }} !</h2>
+<a href="{{ path('form') }}"><button class="survey" type="button">Je réponds au questionnaire</button></a>
+
+    <ul class="autoplay">
+        <li><img src="{{ asset('pictures/family.jpg')}}" alt="family"/></li>
+        <li><img src="{{ asset('/pictures/woman.jpg')}}" alt="woman"/></li>
+        <li><img src="{{ asset('/pictures/couple.jpg')}}" alt="couple"/></li>
+    </ul>
 {% endblock %}
 
-
+{% block javascripts %}
+    {{ parent() }}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.autoplay').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 1500,
+            });
+        });
+    </script>
+{% endblock %}
